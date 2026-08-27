@@ -1,13 +1,5 @@
 class PatternDiamond {
-  /**
-   * @param {number} x, y - center position
-   * @param {number} width - horizontal width of the diamond
-   * @param {number} height - vertical height of the diamond
-   * @param {number} rotation - rotation in radians
-   * @param {p5.Image} imgTop - image for the top triangle
-   * @param {p5.Image} imgBottom - image for the bottom triangle (can be same as imgTop)
-   * @param {number} tileSize - pattern tile size
-   */
+
   constructor(x, y, width, height, rotation, imgTop, imgBottom, tileSize = 25) {
     this.x = x;
     this.y = y;

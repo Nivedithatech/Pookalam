@@ -1,24 +1,5 @@
 class DiamondStackComponent {
-  /**
-   * Three (or more) CONCENTRIC diamonds, largest first, all sharing one centre
-   * that sits on the outer mask circle.
-   *
-   * The mask keeps only what is INSIDE maskRadius, so each diamond loses its
-   * outward half and what remains is a triangle pointing inward — nested
-   * chevrons under the arc, exactly like the masked reference.
-   *
-   * The diamond's long axis is rotated to the component's angle, so the tip
-   * aims at the centre of the layout.
-   *
-   * @param {number} centerX, centerY - center of the whole ring layout
-   * @param {number} angle - direction (radians) this component points, from center outward
-   * @param {number} maskRadius - the outer clip circle (500 diameter -> 250)
-   * @param {number} innerRadius - inner boundary of the band, used for default sizing
-   * @param {p5.Image[]} images - one per diamond, ordered largest -> smallest
-   * @param {number[]} sizes - explicit heights (largest first); omit to use ratios
-   * @param {number} tileSize - pattern tile size
-   * @param {object} opts - { sizeScale, ratios, widthRatio, centerOffset }
-   */
+  
   constructor(
     centerX, centerY, angle,
     maskRadius, innerRadius,
@@ -126,17 +107,7 @@ class DiamondStackComponent {
 }
 
 class LayerSix {
-  /**
-   * @param {number} centerX, centerY
-   * @param {number} innerDiameter - inner boundary of the band (e.g. 360)
-   * @param {number} outerDiameter - the mask circle (e.g. 500)
-   * @param {Array} componentSteps - one per component:
-   *        { images: [big, mid, small], sizes?, angle?, tileSize?,
-   *          sizeScale?, ratios?, widthRatio?, centerOffset? }
-   * @param {number} tileSize - default pattern tile size
-   * @param {object} opts - defaults applied to every component,
-   *                        plus { rotation } in degrees for the whole layer
-   */
+
   constructor(
     centerX, centerY,
     innerDiameter, outerDiameter,

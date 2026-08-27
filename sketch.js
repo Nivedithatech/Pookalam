@@ -101,6 +101,6 @@ function draw() {
     layerFour.display();
     layerFive.display();
    
-    layerSix.rotateBy(0.3);
+    layerSix.rotateBy(0.1);
     layerSix.display();
 }

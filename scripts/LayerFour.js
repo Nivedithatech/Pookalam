@@ -1,14 +1,5 @@
 class LayerFour {
-  /**
-   * @param {number} centerX, centerY - center of the ring
-   * @param {number} innerDiameter - inner boundary of the ring band
-   * @param {number} outerDiameter - outer boundary of the ring band
-   * @param {p5.Image} imgA - first alternating image
-   * @param {p5.Image} imgB - second alternating image
-   * @param {number} count - how many small circles to place around the ring
-   * @param {number} circleSize - diameter of each small circle
-   * @param {number} tileSize - pattern tile size
-   */
+
   constructor(centerX, centerY, innerDiameter, outerDiameter, imgA, imgB, count = 12, circleSize = 30, tileSize = 20) {
     this.centerX = centerX;
     this.centerY = centerY;

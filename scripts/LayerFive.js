@@ -1,27 +1,5 @@
 class HalfCircleComponent {
-  /**
-   * Circles nested so they all touch at ONE shared bottom tangent point
-   * (largest outermost, each smaller one sitting inside it against that same
-   * point) — the unmasked arrangement from the reference.
-   *
-   * That tangent point is placed a little INSIDE the mask line, by cutDepth.
-   * So the mask shaves the same slab off the bottom of every circle, and they
-   * come out as nested domes sharing one baseline:
-   *
-   *      visible height of circle i = size[i] - cutDepth
-   *
-   * cutDepth defaults to a fraction of the SMALLEST circle, so even the
-   * innermost one keeps a visible dome instead of disappearing into the hole.
-   *
-   * @param {number} centerX, centerY - center of the whole ring layout
-   * @param {number} angle - direction (radians) this component points, from center outward
-   * @param {number} innerRadius - mask boundary / the baseline the domes sit on
-   * @param {number} outerRadius - outer boundary of the band
-   * @param {p5.Image[]} images - one per circle, ordered largest -> smallest
-   * @param {number[]} sizes - explicit diameters (largest first); omit to use ratios
-   * @param {number} tileSize - pattern tile size
-   * @param {object} opts - { sizeScale, ratios, cutRatio, cutDepth, clipOuter }
-   */
+ 
   constructor(
     centerX, centerY, angle,
     innerRadius, outerRadius,
@@ -123,16 +101,6 @@ class HalfCircleComponent {
 }
 
 class LayerFive {
-  /**
-   * @param {number} centerX, centerY
-   * @param {number} innerDiameter - inner boundary / mask (e.g. 240)
-   * @param {number} outerDiameter - outer boundary of the band (e.g. 360)
-   * @param {Array} componentSteps - one per component:
-   *        { images: [big, mid, small], sizes?, angle?, tileSize?,
-   *          sizeScale?, ratios?, cutRatio?, cutDepth?, clipOuter? }
-   * @param {number} tileSize - default pattern tile size
-   * @param {object} opts - defaults applied to every component
-   */
   constructor(
     centerX, centerY,
     innerDiameter, outerDiameter,
